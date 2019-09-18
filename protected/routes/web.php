@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profil', 'HomeController@profil')->name('profil');
+Route::post('/home/simpan_profil', 'HomeController@simpan_profil')->name('simpan_profil');
